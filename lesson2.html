@@ -1,0 +1,92 @@
+<html> 
+    <head> 
+        <title> Lesson 0 </title> 
+        <link href="templesson.css" 
+            rel="stylesheet" 
+            type="text/css"/>
+    </head> 
+    <body>
+        <div id="headerbuttons">
+            <button onclick="previous(lessontabs)"><<|</button>
+            <button onclick="next(lessontabs)">|>></button>
+            <button onclick="window.location.href='index.html';">Lesson Home</button>
+        </div>
+        <div id="lessontitle">
+            <h1>Sample Lesson Title</h1>
+        </div>
+        <div id="lessontabs">
+            <div id="tab0">
+                <h2>Sample Text 0</h2>
+                <p>Sample Text 0</p>
+            </div>
+            <div id="tab1">
+                <h2>Sample Text 1</h2>
+                <p>Sample Text 1</p>
+            </div>
+            <div id="tab2">
+                <h2>Sample Text 2</h2>
+                <p>Sample Text 2</p>
+            </div>
+        </div>
+        <div id="footerbuttons">
+            <button onclick="previous(lessontabs)"><<|</button>
+            <button onclick="next(lessontabs)">|>></button>
+            <button onclick="window.location.href='index.html';">Lesson Home</button>
+        </div>
+        <script>
+
+class Tabs {
+  constructor(source) {
+    this.visibleSection = 0;
+    this.path = document.getElementById(source);
+    this.size = document.getElementById(source).children.length;
+  }
+}
+
+function hide(tab)
+{
+    for(let i = 0; i < tab.size; i++)
+    {
+        if(i == tab.visibleSection)
+        {
+            tab.path.children[i].style.display = "";        // make not hidden
+        }
+        else    // if section should not be visible
+        {
+            tab.path.children[i].style.display = "none";    // make hidden, don't make space for this
+        }
+    }
+}
+
+function previous(tab)
+{
+    if(tab.visibleSection == 0)
+    {
+        tab.visibleSection = tab.size - 1;
+    }
+    else
+    {
+        tab.visibleSection -= 1;
+    }
+    hide(tab);
+}
+
+function next(tab)
+{
+    if(tab.visibleSection == tab.size - 1)
+    {
+        tab.visibleSection = 0;
+    }
+    else
+    {
+        tab.visibleSection += 1;
+    }
+    hide(tab);
+}
+
+const lessontabs = new Tabs('lessontabs');
+hide(lessontabs);
+
+        </script> 
+    </body> 
+</html>
