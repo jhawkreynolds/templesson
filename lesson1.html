@@ -60,60 +60,10 @@
             <button onclick="next(lessontabs)">|>></button>
             <button onclick="window.location.href='index.html';">Lesson Home</button>
         </div>
+        <script src="interactive_tabs.js"></script>
         <script>
-
-class Tabs {
-  constructor(source) {
-    this.visibleSection = 0;
-    this.path = document.getElementById(source);
-    this.size = document.getElementById(source).children.length;
-  }
-}
-
-function hide(tab)
-{
-    for(let i = 0; i < tab.size; i++)
-    {
-        if(i == tab.visibleSection)
-        {
-            tab.path.children[i].style.display = "";        // make not hidden
-        }
-        else    // if section should not be visible
-        {
-            tab.path.children[i].style.display = "none";    // make hidden, don't make space for this
-        }
-    }
-}
-
-function previous(tab)
-{
-    if(tab.visibleSection == 0)
-    {
-        tab.visibleSection = tab.size - 1;
-    }
-    else
-    {
-        tab.visibleSection -= 1;
-    }
-    hide(tab);
-}
-
-function next(tab)
-{
-    if(tab.visibleSection == tab.size - 1)
-    {
-        tab.visibleSection = 0;
-    }
-    else
-    {
-        tab.visibleSection += 1;
-    }
-    hide(tab);
-}
-
 const lessontabs = new Tabs('lessontabs');
 hide(lessontabs);
-
-        </script> 
+        </script>  
     </body> 
 </html>
