@@ -1,0 +1,63 @@
+/*lab5style.css*/
+/*author: Jack Reynolds*/
+/*written: 6 November 2022*/
+
+/*INDEX STYLING BELOW*/
+
+/*  The "landing" class is used for
+    all HTML elements being styled for this section.
+*/
+
+body.landing 
+{ 
+    background-color: lightsteelblue; 
+} 
+
+h1.landing
+{
+    color: purple;
+    font-family: verdana;
+    font-size: 30pt; 
+}
+
+p.landing
+{
+    font-family: verdana;
+    font-size: 14pt; 
+}
+
+/*PART 3 STYLING BELOW*/
+
+/*  The "tofupupper" class is used for
+    all HTML elements being styled for this section.
+*/
+
+body.tofupupper 
+{ 
+    background-color: lightsteelblue; 
+} 
+
+h1.tofupupper 
+{ 
+    color: hotpink;
+    font-family: verdana;
+    font-size: 30pt; 
+}
+
+h1.tofupupper:hover /* use of hover */
+{ 
+    color: red;
+    font-size: 40pt; 
+}
+
+p.tofupupper
+{ 
+    font-family: verdana; 
+    font-size: 14pt; 
+}
+
+p.tofupupper_small
+{ 
+    font-family: verdana; 
+    font-size: 10pt; 
+}
