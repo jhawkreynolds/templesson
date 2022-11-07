@@ -54,19 +54,19 @@
                 Sample Text
 
                 <div id="lesson1image">
-                    <div id="instruction">
+                    <div class="ClickableImage" id="instruction" style="background-color:lightgray;">
                         <h3>Click on the black king!</h3>
                     </div>
-                    <div id="images">
+                    <div class="ClickableImage" id="images">
                         <div id="image1"></div>
                             <img onclick="showFeedback(lesson1image, 'bad_outcome')" src="king_w.png">
                         <div id="image2"></div>
                             <img onclick="showFeedback(lesson1image, 'good_outcome')" src="king_b.png">
                     </div>
-                    <div id="feedback">
+                    <div class="ClickableImage" id="feedback" style="background-color:lightgray;">
                         <h3 id="waiting">Waiting for user input...</h3>
-                        <h3 id="good_outcome">Good job!</h3>
-                        <h3 id="bad_outcome">Not quite. Try again.</h3>
+                        <h3 id="good_outcome" style="color:green;">Good job!</h3>
+                        <h3 id="bad_outcome" style="color:red;">Not quite. Try again.</h3>
                     </div>
                 </div>
 
