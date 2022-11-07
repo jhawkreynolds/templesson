@@ -51,7 +51,11 @@
             <div id="tab2">
                 <h2>Interactive Images</h2>
                 <p>
-                You may also encounter an image that is 
+                You may also encounter an image that<br>
+                you can interact with in a lesson.<br>
+                In the interactive module below,<br>
+                you can click on either of the chess pieces<br>
+                and the module will give you feedback.<br>
 
                 <div id="lesson1image">
                     <div class="ClickableImage" id="instruction" style="background-color:lightgray;">
@@ -69,7 +73,21 @@
                         <h3 id="bad_outcome" style="color:red;">Not quite. Try again.</h3>
                     </div>
                 </div>
-
+                <br>
+                Once you have finished interacting with the module,<br>
+                navigate to the next page.<br>
+                </p>
+            </div>
+            <div id="tab3">
+                <h2>Lesson Complete</h2>
+                <p>
+                You have completed this lesson!<br>
+                To progress to the next lesson, click the "Lesson Home" button<br>
+                or use the button below to return to the lesson select page.<br>
+                <br>
+                <button onclick="window.location.href='index.html';">Complete Lesson</button>
+                <br>
+                To restart this lesson, hit the next button again.<br> 
                 </p>
             </div>
         </div>
@@ -81,10 +99,10 @@
         <script src="interactive_tabs.js"></script>
         <script src="interactive_images.js"></script>
         <script>
-const lessontabs = new Tabs('lessontabs');
-hide(lessontabs);
-const lesson1image = new ClickableImage('lesson1image');
-showOutcomes(lesson1image);
+            const lessontabs = new Tabs('lessontabs');
+            hide(lessontabs);
+            const lesson1image = new ClickableImage('lesson1image');
+            showOutcomes(lesson1image);
         </script>  
     </body> 
 </html>

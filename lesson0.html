@@ -1,21 +1,47 @@
+<!--
+    file:       lesson0.html
+    author:     Jack Reynolds
+    modified:   6 November 2022
+    desc:       The following file is a pure HTML model
+                for ChessEDU lessons.
+-->
 <html> 
-    <head> 
+<!--
+    This head includes the title of the page
+    and a link to the .css file associated with this page.
+--> <head> 
         <title> Lesson 0 </title> 
         <link href="templesson.css" 
             rel="stylesheet" 
             type="text/css"/>
     </head>
-
-    <body>
-        <div id="lessontitle">
+<!--
+    This body includes a sample three-tab menu,
+    divided with <div> elements into functional sections.
+--> <body>
+    <!--
+        The lessontitle section is just a <div> element
+        that contains the heading for the lesson.
+    --> <div id="lessontitle">
             <h1>Sample Lesson Title</h1>
         </div> 
-        <div id="headerbuttons">
+    <!--
+        The headerbuttons section includes the top set
+        of buttons use to progress the page left and right.
+        they call the functions previous() and next()
+        from the script interactive_tabs.js.
+        The passed value is the instance of Tabs,
+        a class defined in interactive_tabs.js,
+        that is declared in the <script> below.
+        Included is also the Lesson Home button,
+        that returns to the main course page.
+    --> <div id="headerbuttons">
             <button onclick="previous(lessontabs)"><<|</button>
             <button onclick="next(lessontabs)">|>></button>
             <button onclick="window.location.href='index.html';">Lesson Home</button>
         </div>
-        <div id="lessontabs">
+    <!--
+    --> <div id="lessontabs">
             <div id="tab0">
                 <h2>Sample Text 0</h2>
                 <p>Sample Text 0</p>
@@ -29,15 +55,16 @@
                 <p>Sample Text 2</p>
             </div>
         </div>
-        <div id="footerbuttons">
+    <!--
+    --> <div id="footerbuttons">
             <button onclick="previous(lessontabs)"><<|</button>
             <button onclick="next(lessontabs)">|>></button>
             <button onclick="window.location.href='index.html';">Lesson Home</button>
         </div>
         <script src="interactive_tabs.js"></script>
         <script>
-const lessontabs = new Tabs('lessontabs');
-hide(lessontabs);
+            const lessontabs = new Tabs('lessontabs');
+            hide(lessontabs);
         </script> 
     </body> 
 </html>
