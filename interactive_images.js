@@ -5,9 +5,9 @@ class ClickableImage {
         this.size = document.getElementById(source).children.length;
         this.feedbackPath = document.getElementById(source).children[2];
         this.currentOutcome = 0;        
-        //  A waiting Message is shown when nothing has occurred.
         this.outcomes = fetchOutcomes(source);
         // An array of the different outcomes in order, besides the waiting message.
+        showOutcomes(this);
     }
 }
 

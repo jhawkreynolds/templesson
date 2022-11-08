@@ -3,6 +3,7 @@ class Tabs {
         this.visibleSection = 0;
         this.path = document.getElementById(source);
         this.size = document.getElementById(source).children.length;
+        hide(this);
     }
 }
   

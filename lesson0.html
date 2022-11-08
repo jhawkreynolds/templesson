@@ -41,6 +41,9 @@
             <button onclick="window.location.href='index.html';">Lesson Home</button>
         </div>
     <!--
+        The lessontabs section includes all of the tabs within each lesson.
+        To add content to a tab, put it inside the <div> elements with id = "tabN".
+        These div elements will be hidden, which will hide all of the contents inside of them.
     --> <div id="lessontabs">
             <div id="tab0">
                 <h2>Sample Text 0</h2>
@@ -56,15 +59,22 @@
             </div>
         </div>
     <!--
+        The footerbuttons section is identical to the headerbuttons section in function.
     --> <div id="footerbuttons">
             <button onclick="previous(lessontabs)"><<|</button>
             <button onclick="next(lessontabs)">|>></button>
             <button onclick="window.location.href='index.html';">Lesson Home</button>
         </div>
-        <script src="interactive_tabs.js"></script>
-        <script>
+    <!--
+        We import the script "interactive_tabs.js" into this html file
+        for lessontabs, our instance of Tabs.
+    --> <script src="interactive_tabs.js"></script>
+    <!--
+        In our self-contained script below,
+        we create an instance of Tabs on the div section "lessontabs".
+        The class constructor automatically hides the all tabs except the first. 
+    --> <script>
             const lessontabs = new Tabs('lessontabs');
-            hide(lessontabs);
         </script> 
     </body> 
 </html>

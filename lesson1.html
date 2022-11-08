@@ -1,3 +1,11 @@
+<!--
+    file:       lesson1.html
+    author:     Jack Reynolds
+    modified:   7 November 2022
+    desc:       The following file is a realization
+                of the model provided in lesson0.html
+                as an example ChessEDU Lesson.
+-->
 <html> 
     <head> 
         <title> Lesson 1 </title> 
@@ -56,23 +64,41 @@
                 In the interactive module below,<br>
                 you can click on either of the chess pieces<br>
                 and the module will give you feedback.<br>
-
-                <div id="lesson1image">
-                    <div class="ClickableImage" id="instruction" style="background-color:lightgray;">
+            <!--
+                This is an instance of the ClickableImage class in "interactive_images.js".
+                It can be implemented by passing in the id of the main <div> element.
+                It contains three <div> elements inside of it that contain
+                the instruction box, the image box, and the feedback box.
+            --> <div id="lesson1image">
+                <!-- 
+                    This <div> element contains on the subheading text
+                    that tells the user what they are supposed to do with the space. 
+                --> <div class="ClickableImage" id="instruction" style="background-color:lightgray;">
                         <h3>Click on the black king!</h3>
                     </div>
-                    <div class="ClickableImage" id="images">
+                <!--
+                    This <div> element contains any images or clickable objects
+                    that can be interacted with by the user.
+                    The function showFeedback(instance, 'outcome') from "interactive_images.js"
+                    can be called to change the displayed outcome
+                    to the outcome desired to show if the user clicks the associated image.
+                --> <div class="ClickableImage" id="images">
                         <div id="image1"></div>
                             <img onclick="showFeedback(lesson1image, 'bad_outcome')" src="king_w.png">
                         <div id="image2"></div>
                             <img onclick="showFeedback(lesson1image, 'good_outcome')" src="king_b.png">
                     </div>
-                    <div class="ClickableImage" id="feedback" style="background-color:lightgray;">
+                <!--
+                    This <div> element lists the possible outcomes of the event
+                    depending on which image the user interacts with.
+                    There is a default outcome "waiting" before the user makes a decision.
+                --> <div class="ClickableImage" id="feedback" style="background-color:lightgray;">
                         <h3 id="waiting">Waiting for user input...</h3>
                         <h3 id="good_outcome" style="color:green;">Good job!</h3>
                         <h3 id="bad_outcome" style="color:red;">Not quite. Try again.</h3>
                     </div>
                 </div>
+
                 <br>
                 Once you have finished interacting with the module,<br>
                 navigate to the next page.<br>
@@ -100,9 +126,7 @@
         <script src="interactive_images.js"></script>
         <script>
             const lessontabs = new Tabs('lessontabs');
-            hide(lessontabs);
             const lesson1image = new ClickableImage('lesson1image');
-            showOutcomes(lesson1image);
         </script>  
     </body> 
 </html>
